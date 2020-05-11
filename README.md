@@ -12,7 +12,7 @@ To use the component template in your project:
 - Clone the project locally.
 - Run `npm i` to install [the command-line tools](#command-line-tooling).
 - Update `antora.yml`, changing the `name`, `title`, and `version` properties making them appropriate to your project.
-- Run `yaml-lint antora.yml` to lint `antora.yml` after you've made changes, to ensure that it contains valid YAML.
+- Run `npm run lint` to lint `antora.yml` after you've made changes, to ensure that it contains valid YAML.
 - Start adding content under `modules/ROOT/pages`.
   An empty default file (`modules/ROOT/pages/index.adoc`) is available, ready for adding initial content.
 
