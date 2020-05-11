@@ -5,6 +5,8 @@ The project's aim is to help make it as quick and painless as possible to get up
 
 ## Installation
 
+**Note:** before working through the installation steps, make sure that you have both [Node] and [NPM] installed.
+
 To use the component template in your project:
 
 - Clone the project locally.
@@ -25,3 +27,6 @@ Additional tooling is intended to be added in future releases.
 ## Found An Issue?
 
 If you've found an issue with the repository, then create a new issue or create a Pull Request and let's get it fixed.
+
+[Node]: https://nodejs.org/en/download/
+[NPM]: https://www.npmjs.com/get-npm
