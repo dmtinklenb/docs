@@ -1,4 +1,4 @@
-* xref:index.adoc[Home]
+* xref:index.adoc.bak[Home]
 * Brocade
 ** Configuration
 *** xref:brocade/enable_disable_snmp.adoc[Enable/Disable SNMP]
@@ -11,13 +11,22 @@
 ** Configuration
 *** Services
 **** xref:redhat/configuration/kerberos_config.adoc[Configure Kerberos]
+**** xref:redhat/configuration/chrony.adoc[Install/Configure Chrony]
 *** System
 **** xref:redhat/configuration/AD_Authentication.adoc[AD Authentication]
+**** xref:redhat/configuration/diskadd.adoc[Disk Addition]
+**** xref:redhat/configuration/diskpart.adoc[Disk Partition]
 ** xref:redhat/documentation/documentation.adoc[Documentation & Support]
+** Installation
+*** xref:redhat/installation/rhel8mininstall.adoc[RHEL 8 Minimal Install]
 ** Management
 *** xref:redhat/management/chrony_troubleshooting.adoc[Chrony/NTP Troubleshooting]
 *** xref:redhat/management/create_checksums.adoc[Creating and Checking Checksums in RedHat]
 * Veeam
 ** xref:veeam/Appsprd_Restore.adoc[Appsprd Restore]
+
+
+
+
 
 
