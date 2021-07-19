@@ -1,5 +1,5 @@
-name: my_antora_component 
-title: My Antora Component 
-version: '1.0' 
-nav: 
+name: wellsdocs
+title: Wells IT Documentation
+version: '1.0'
+nav:
 - modules/ROOT/nav.adoc

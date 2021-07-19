@@ -1,0 +1,39 @@
+= Disaster Recovery Manual
+
+:toc2:
+:toclevels: 4
+:imagesdir: /wellsdocs/modules/dr/assets/images
+
+== Chapter 1 - IT DR Plan
+
+include::/wellsdocs/modules/dr/pages/chapter1/1.0.adoc[leveloffest=+1]
+
+
+
+== Chapter 4
+
+=== Tier 0
+
+==== Linux
+
+
+include::/wellsdocs/modules/dr/pages/chapter4/tier0/linux/L01.adoc[leveloffset=+3]
+
+include::/wellsdocs/modules/dr/pages/chapter4/tier0/linux/L02.adoc[leveloffset=+3]
+
+include::/wellsdocs/modules/dr/pages/chapter4/tier0/linux/L03.adoc[leveloffset=+3]
+
+include::/wellsdocs/modules/dr/pages/chapter4/tier0/linux/L04.adoc[leveloffset=+3]
+
+
+==== Storage
+
+include::/wellsdocs/modules/dr/pages/chapter4/tier0/storage/S01.adoc[leveloffset=+3]
+
+include::/wellsdocs/modules/dr/pages/chapter4/tier0/storage/S02.adoc[leveloffset=+3]
+
+include::/wellsdocs/modules/dr/pages/chapter4/tier0/storage/S03.adoc[leveloffset=+3]
+
+
+=== Tier 1
+
