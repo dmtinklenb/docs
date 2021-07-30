@@ -82,37 +82,36 @@
 |Console
 
 |pav010vctrapps
-|https://pav010vctrapps.bluebunny.com/ui/[UI]
-|https://pav010vctrapps.bluebunny.com:5480/[Console]
+a|image::html5.png[Link=https://pav010vctrapps.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrapps.bluebunny.com:5480/,window=_blank,width=30,role=left]
 
 |pav010vctrdb
-|https://pav010vctrdb.bluebunny.com/ui/[UI]
-|https://pav010vctrdb.bluebunny.com:5480/[Console]
+a|image::html5.png[Link=https://pav010vctrdb.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrdb.bluebunny.com:5480/,window=_blank,width=30,role=left]
 
 |pav010vctrhyp
-|https://pav010vctrhyp.bluebunny.com/ui/[UI]
-|https://pav010vctrhyp.bluebunny.com:5480/[Console]
+a|image::html5.png[Link=https://pav010vctrhyp.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrhyp.bluebunny.com:5480/,window=_blank,width=30,role=left]
 
 |pav010vctrmisc
-|https://pav010vctrmisc.bluebunny.com/ui/[UI]
-|https://pav010vctrmisc.bluebunny.com:5480/[Console]
+a|image::html5.png[Link=https://pav010vctrmisc.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrmisc.bluebunny.com:5480/,window=_blank,width=30,role=left]
 
 |pav010vctrquad
-|https://pav010vctrquad.bluebunny.com/ui/[UI]
-|https://pav010vctrquad.bluebunny.com:5480/[Console]
+a|image::html5.png[Link=https://pav010vctrquad.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrquad.bluebunny.com:5480/,window=_blank,width=30,role=left]
 
 |pav010vctrtrapx
-|https://pav010vctrtrapx.bluebunny.com/ui/[UI]
-|https://pav010vctrtrapx.bluebunny.com:5480/[Console]
+a|image::html5.png[Link=https://pav010vctrtrapx.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrtrapx.bluebunny.com:5480/,window=_blank,width=30,role=left]
 
 |pav010vctrvdi-lem
-|https://pav010vctrvdi-lem.bluebunny.com/ui/[UI]
-|https://pav010vctrvdi-lem.bluebunny.com:5480/[Console]
+a|image::html5.png[Link=https://pav010vctrvdi-lem.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrvdi-lem.bluebunny.com:5480/,window=_blank,width=30,role=left]
 
 |pav010vctrweb
-|https://pav010vctrweb.bluebunny.com/ui/[UI]
-|https://pav010vctrweb.bluebunny.com:5480/[Console]
-
+a|image::html5.png[Link=https://pav010vctrweb.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrweb.bluebunny.com:5480/,window=_blank,width=30,role=left]
 |===
 ====
 ====
@@ -178,14 +177,14 @@
 |
 |
 
-|https://outlook.office365.com/owa[Outlook]
-|https://bluebunny-my.sharepoint.com/[OneDrive]
-|https://www.office.com/launch/word[Word]
-|https://www.office.com/launch/excel[Excel]
+a| image::outlook.png[Link=https://outlook.office365.com/owa,window=_blank,width=30,role=center]
+a| image::onedrive.png[link=https://bluebunny-my.sharepoint.com/,window=_blank,width=30,role=center]
+a| image::word.png[link=https://www.office.com/launch/word,window=_blank,width=30,role=center]
+a| image::excel.png[link=https://www.office.com/launch/excel,window=_blank,width=30,role=center]
 
-|https://www.office.com/launch/onenote[OneNote]
-|https://aka.ms/mstfw[Teams]
-|https://www.yammer.com/office365[Yammer]
+a| image::onenote.png[link=https://www.office.com/launch/onenote,window=_blank,width=30,role=center]
+a| image::teams.png[link=https://aka.ms/mstfw,window=_blank,width=30,role=center]
+a| image::yammer.png[link=https://www.yammer.com/office365,window=_blank,width=30,role=center]
 |
 |===
 [cols="4*",options="header"]
@@ -195,7 +194,7 @@
 |
 |
 
-|http://bunnynet.bluebunny.com/is/DisasterRecovery[Disaster Recovery Documentation]
+|http://plv001antora.bluebunny.com/itdocs/dr/index.html[Disaster Recovery Documentation]
 |http://bunnynet.bluebunny.com/[BunnyNet]
 |http://pwv001sdm.bluebunny.com:8080/CAisd/pdmweb.exe[Bluebunny Help Desk]
 |http://usdnet.bluebunny.com/[Service Desk Dashboard]

@@ -1,8 +1,6 @@
-= Network
+= N01 | Modify Routing Statement on DR-ASW-A | 05 MIN |
 
 :imagesdir: /wellsdocs/modules/dr/assets/images
-
-== N01 | Modify Routing Statement on DR-ASW-A | 05 MIN |
 
 ===================
 IMPORTANT: xref:chapter4/tier0/storage/S01.adoc[S01] must be completed before this step.
@@ -22,7 +20,7 @@ Wherever our work area is, the infrastructure cabling must be configured by Long
 
 If we work in the datacenter, we'll put a switch on a table and run cables with which to connect laptops.
 
-=== Classroom
+== Classroom
 
 1. WHAT SWITCH, CABLE - LOCATION TERA TERM, USER/PASSWORD (stays in datacenter not on network)  [red]#(Label all equipment)#
 2. connect console -> open tera term -> choose serial -> select comm port -> enter
@@ -38,7 +36,7 @@ image::N01-01.jpg[]
 7. CLICK THE LOAD OPTION ON THE RIGHT MIDDLE OF THE SCREEN AND OPEN OPTION
 8. GO TO 'SSH TO DRN9K' LINE AND CONTINUE
 
-=== Data Center
+== Data Center
 
 1. USE A DR LAPTOP WITH WELLS DOMAIN ACCESS AND PUTTY INSTALLED
 2. USING AN ETHERNET CABLE, CONNECT THE LAPTOP TO DR-N5K-100 ON PORT 424
