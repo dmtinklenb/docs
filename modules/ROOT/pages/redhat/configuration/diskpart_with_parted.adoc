@@ -1,0 +1,7 @@
+= Disk Partition - Create Optimally Aligned Fully Partitioned Disk with parted
+
+----
+# parted -s -a optimal /dev/sda mklabel gpt
+# parted -s -a optimal /dev sda mkpart primary ext4 0% 100%
+# mkfs -t ext4 /dev/sda1
+----

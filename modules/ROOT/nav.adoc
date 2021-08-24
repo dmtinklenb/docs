@@ -23,6 +23,7 @@
 **** xref:redhat/configuration/AD_Authentication.adoc[AD Authentication]
 **** xref:redhat/configuration/diskadd.adoc[Disk Addition]
 **** xref:redhat/configuration/diskpart.adoc[Disk Partition]
+**** xref:redhat/configuration/diskpart_with_parted.adoc[Disk Partition with parted]
 ** xref:redhat/documentation/documentation.adoc[Documentation & Support]
 ** Installation
 *** xref:redhat/installation/rhel8mininstall.adoc[RHEL 8 Minimal Install]
