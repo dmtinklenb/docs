@@ -130,10 +130,10 @@
 |{set:cellbgcolor:#000000}
 8+| https://plv069ipam.bluebunny.com/ui/[Infoblox DNS Mgr]{set:cellbgcolor:}
 
-| pws048cvmedia
+| pws048vmprxy
 |
 |
-| https://cimc-pws048cvmedia.bluebunny.com/[pws048cvmedia]
+| https://cimc-pws048vmprxy.bluebunny.com/[pws048vmprxy]
 |
 |{set:cellbgcolor:#000000}
 3+| {set:cellbgcolor:}

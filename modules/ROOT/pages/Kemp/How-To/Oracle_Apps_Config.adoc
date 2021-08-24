@@ -1,0 +1,55 @@
+= Create Oracle Applications Service
+
+. Login to the Kemp Load Balancer
+
+. Select “Virtual Services” from the menu on the left.
++
+image::kemp/kemp_Oracle_apps_kemp_service_01.jpg[]
++
+. Click “Add New” to add a new service.
++
+image::kemp/kemp_Oracle_apps_kemp_service_02.jpg[]
++
+. Add the “Virtual Address” and click the “Add this Virtual Service” button.
++
+image::kemp/kemp_Oracle_apps_kemp_service_03.jpg[]
++
+. Add the “Service Name” and click the “Set Nickname” button under Basic Properties.
++
+image::kemp/kemp_Oracle_apps_kemp_service_04.jpg[]
++
+. Expand the Standard Options change the following:
++
+----
+Persistence Options: Mode: Source IP Address
+Timeout: 4 Hours
+Scheduling Method: resource based (adaptive)
+----
+
++
+image::kemp/kemp_Oracle_apps_kemp_service_05.jpg[]
++
+. Expand the Real Servers section and change the “Real Server Check Parameters” to ICMP Ping.
++
+image::kemp/kemp_Oracle_apps_kemp_service_06.jpg[]
++
+. Click on the “Add New …” button to add a new Real Server.
+. Enter the IP of the HTTP node to the “Real Server Address” text box and change the Port to 8000 and click the “Add This Real Server” button.
++
+image::kemp/kemp_Oracle_apps_kemp_service_07.jpg[]
++
+. Click the “OK” button on the Added Real Server confirmation window.
++
+image::kemp/kemp_Oracle_apps_kemp_service_08.jpg[]
++
+. Repeat steps 9 and 10 for each server to be load balanced.
+. Click the Back button
+. You should see the list of servers to be load balanced in the “Real Servers” section.
++
+image::kemp/kemp_Oracle_apps_kemp_service_09.jpg[]
++
+. Click the “Back” button. This will take you to the Virtual Services Status screen.
++
+image::kemp/kemp_Oracle_apps_kemp_service_10.jpg[]
++
+

@@ -185,6 +185,7 @@
 **** xref:chapter4/appendix/A10.adoc[A10]
 **** xref:chapter4/appendix/A11.adoc[A11]
 **** xref:chapter4/appendix/A17.adoc[A17]
+*** link:http://plv001antora.bluebunny.com/itdocs/dr/_attachments/dr4.pdf[Chapter 4 PDF]
 
 
 

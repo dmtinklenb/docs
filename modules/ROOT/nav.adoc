@@ -8,6 +8,12 @@
 ** How-To
 *** xref:cisco/regenerate_ucs_cert.adoc[Regenerate UCS Certificate]
 ** xref:cisco/manuals/manuals.adoc[Manuals]
+* Kemp
+** How-To
+*** xref:Kemp/How-To/Oracle_Apps_Config.adoc[Create Oracle Applications Service]
+* Pure
+** How-To
+*** xref:pure/how-to/check_port_balancing.adoc[Check Ports for Load Balancing]
 * Red Hat
 ** Configuration
 *** Services
@@ -23,6 +29,10 @@
 ** Management
 *** xref:redhat/management/chrony_troubleshooting.adoc[Chrony/NTP Troubleshooting]
 *** xref:redhat/management/create_checksums.adoc[Creating and Checking Checksums in RedHat]
+*** xref:redhat/management/cups_commands.adoc[Cups Commands]
+*** xref:redhat/management/multipath_commands.adoc[Multipath Commands]
+*** xref:redhat/management/nfs_commands.adoc[NFS Commands]
+*** link:{attachmentsdir}/rh_yum_cheatsheet_1214_jcs_print-1.pdf[YUM Cheat Sheet]
 * Veeam
 ** xref:veeam/overview.adoc[Backup Overview]
 ** xref:veeam/backup_schedule.adoc[Backup Schedule]

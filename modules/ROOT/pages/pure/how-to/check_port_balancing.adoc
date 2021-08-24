@@ -1,0 +1,11 @@
+= Checking Port Balancing
+
+== To see all hosts and ports
+----
+>purehost monitor --balance
+----
+
+== To see just one host and its ports
+----
+>purehost monitor --balance [hostname]
+----
