@@ -14,7 +14,7 @@ steps:
     submodules: true
   - task: AzureStaticWebApp@0
     inputs:
-      app_location: '/build/site/welldocs/1.0/'
+      app_location: '/build/site/'
       api_location: 'api'
       output_location: '/build'
       azure_static_web_apps_api_token: $(deployment_token)
