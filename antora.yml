@@ -1,5 +1,7 @@
-name: wellsdocs
-title: Wells IT Documentation
-version: '1.0'
+name: itdocs
+title: IT Documentation
+version: master
+start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
+- modules/dr/nav.adoc
