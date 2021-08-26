@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux :: Wells IT Docs</title>
+    <link rel="canonical" href="http://plv001antora.bluebunny.com/itdocs/dr/chapter4/tier0/linux.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://plv001antora.bluebunny.com">Wells IT Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="http://plv001antora.bluebunny.com/itdocs/index.html">Home</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="itdocs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">IT Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html">Systems Engineers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Brocade</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../brocade/enable_disable_snmp.html">Enable/Disable SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../brocade/set_ntp.html">Setup NTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cisco</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How-To</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../cisco/regenerate_ucs_cert.html">Regenerate UCS Certificate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../cisco/manuals/manuals.html">Manuals</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Red Hat</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Services</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../../redhat/configuration/kerberos_config.html">Configure Kerberos</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">System</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../../redhat/configuration/AD_Authentication.html">AD Authentication</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../redhat/documentation/documentation.html">Documentation &amp; Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Management</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../redhat/management/chrony_troubleshooting.html">Chrony/NTP Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../redhat/management/create_checksums.html">Creating and Checking Checksums in RedHat</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Veeam</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../veeam/Appsprd_Restore.html">Appsprd Restore</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Disaster Recovery</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Chapter 1 - IT DR Plans</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Chapter 2 - IT DR Teams</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Chapter 3 - IT Environment</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Chapter 4 - DR Recovery Process</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tier 0</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="storage.html">Storage</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tier 1</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tier1/storage.html">Storage</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendix</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../appendix/A02.html">A02</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">IT Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">IT Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">IT Documentation</a></li>
+    <li><a href="../../index.html">Disaster Recovery</a></li>
+    <li>Chapter 4 - DR Recovery Process</li>
+    <li>Tier 0</li>
+    <li><a href="linux.html">Linux</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///wellsdocs/modules/dr/pages/chapter4/tier0/linux.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Linux</h1>
+<div class="sect1">
+<h2 id="_l01_reboot_vcenter_server_dav010vctr_20_min"><a class="anchor" href="#_l01_reboot_vcenter_server_dav010vctr_20_min"></a>L01 | Reboot vCenter Server (DAV010VCTR) | 20 MIN |</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+W02 must be completed before this step.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Open a browser go to <a href="https://dav010vctr.bluebunny.com:5480/login" class="bare">https://dav010vctr.bluebunny.com:5480/login</a>   <a href="https://172.27.97.12:5480/login" class="bare">https://172.27.97.12:5480/login</a> and login with the root account.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/L01-01.jpg" alt="L01 01">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Click on the "Actions" menu in the top right hand corner and select Reboot.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/L01-02.jpg" alt="L01 02">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Click on the "Yes" button when the confirmation window pops up.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/L01-03.jpg" alt="L01 03">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_l02_prepare_esx_servers_40_min"><a class="anchor" href="#_l02_prepare_esx_servers_40_min"></a>L02 | Prepare ESX Servers | 40 MIN |</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+W02, L01, N04, S02 must be completed before this step.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Applications -    des071esx20 (172.27.97.105) , des071esx21 (172.27.97.106), des071esx22 (172.27.97.107</p>
+</div>
+<div class="paragraph">
+<p>DB - des073esx30 (172.72.97.225, des073esx31(172.72.97.226)</p>
+</div>
+<div class="paragraph">
+<p>DMZ - des074esx20 (172.27.97.120)</p>
+</div>
+<div class="paragraph">
+<p>DMZ Large CPU - des075esx20 (172.72.97.140)</p>
+</div>
+<div class="paragraph">
+<p>Windows - des077esx21 (172.27.97.42), des077esx22 (172.27.97.43), des077esx23 (172.27.97.44), des0077esx24 (172.27.97.45)   <strong class="red">If these are hot servers  - DO NOT REBOOT</strong></p>
+</div>
+<div class="paragraph">
+<p>Process Controls - des078esx31 (172.27.97.32).des078esx32 (172.27.97.530</p>
+</div>
+<div class="paragraph">
+<p>Quad CPU - des079esx20 (172.27.97.104)</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>OPTION 1</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Scan the storage.  If the volumes show up, continue to L03 without rebooting.  This will save time by not needing to reboot.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>OPTION 2</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Scan the storage.  If the volumes do not show up after scanning the storage, reboot the ESX servers.  Choose one of the following 3 reboot options.  When the reboots are complete continue to L03.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>There are 2 ways to reboot ESX servers - (1) HTML5 client reboot and (2) CLI reboot.  Both options are described below.  Perform the steps on only one option.</strong></p>
+</div>
+<div class="sect2">
+<h3 id="_option_1_html5_client_reboot"><a class="anchor" href="#_option_1_html5_client_reboot"></a>Option #1 - HTML5 CLIENT REBOOT</h3>
+<div class="paragraph">
+<p><strong>1. Open a browser and go to the vCenter vSphere Manager and login as the <a href="mailto:administrator@vsphere.local.user">administrator@vsphere.local.user</a></strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/L02-01.jpg" alt="L02 01">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>2. Click on the "Hosts and Clusters" tab in the top left hand corner</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/L02-02.jpg" alt="L02 02">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>3.  Select the ESXi server to be rebooted by traversing he tree in the left hand pane</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/L02-03.jpg" alt="L02 03">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>4. Click on the "Actions" menu then "Power" option and then the "Reboot" option</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/L02-04.jpg" alt="L02 04">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>5.  Enter the reason for the reboot in the Text box and then click on the "OK" button to reboot the server.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/L02-05.jpg" alt="L02 05">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_option_2_cli_reboot"><a class="anchor" href="#_option_2_cli_reboot"></a>Option #2 - CLI REBOOT</h3>
+<div class="paragraph">
+<p><strong>1. Login to system as root</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ssh root@des071esx20</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>2. Type the reboot command and press the ENTER key.</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># reboot</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>3. Take the ESX servers out of maintenance mode</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_l03_start_plv001ntp_plv001lxlog_plv001foswiki_plv001lxadm_10_min"><a class="anchor" href="#_l03_start_plv001ntp_plv001lxlog_plv001foswiki_plv001lxadm_10_min"></a>L03 | Start plv001ntp, plv001lxlog, plv001foswiki, plv001lxadm | 10 MIN |</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+W02, N04, S02, L02 must be completed before this step.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+MAKE SURE DOMAIN CONTROLLERS ARE UP BEFORE USING VMWARE (verify with the windows admins)
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>plv001ntp</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Description: Time Server</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>IP Address: 172.23.5.237</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VLAN: 5 - Network adapter 1</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ESXi Cluster: Apps</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Datastore: 71-LXAdmin</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Refer to <a href="../../appendix/A02.html" class="page">Appendix A02</a> for boot up procedure.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>plv001lxlog</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Description: Logging Server</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>IP Address: 172.23.5.240</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VLAN: 5 - Network adapter 1</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ESXi Cluster: Apps</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Datastore: 71-LXAdmin</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Refer to <a href="../../appendix/A02.html" class="page">Appendix A02</a> for boot up procedure.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>plv001foswiki</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Description: Time Server</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>IP Address: 172.23.5.246</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VLAN: 5 - Network adapter 1</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ESXi Cluster: Apps</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Datastore: 71-LXAdmin</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Refer to <a href="../../appendix/A02.html" class="page">Appendix A02</a> for boot up procedure.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>plv001lxadm</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Description: Time Server</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>IP Address: 172.23.5.241</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VLAN: 5 - Network adapter 1</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ESXi Cluster: Apps</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Datastore: 71-LXAdmin</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Refer to <a href="../../appendix/A02.html" class="page">Appendix A02</a> for boot up procedure.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

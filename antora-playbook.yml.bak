@@ -1,0 +1,13 @@
+site:
+  title: Wells IT Docs
+  url: http://plv001antora.bluebunny.com
+
+content:
+  sources:
+  - url: .
+    branches: HEAD
+
+ui:
+  bundle:
+    url: /docs-ui/ui-bundle.zip
+    snapshot: true

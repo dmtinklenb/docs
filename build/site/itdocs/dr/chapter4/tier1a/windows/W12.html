@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>W12 | RING CENTRAL FOR BUSINESS (DWV088SFB1, DWV088SFB2, DWV088SFB3, DWV051SFBE1, DWV051SFBE2) | 20 MIN :: Wells IT Docs</title>
+    <link rel="canonical" href="http://plv001antora.bluebunny.com/itdocs/dr/chapter4/tier1a/windows/W12.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+<link rel="stylesheet" href="../../../../../_/css/search.css">
+    <script>var uiRootPath = '../../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://plv001antora.bluebunny.com">Wells IT Docs</a>
+        <div class="navbar-item">
+          <input id="search-input" type="text" placeholder="Search docs">
+        </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="http://plv001antora.bluebunny.com/itdocs/index.html">Home</a>
+        <div class="navbar-item">
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="itdocs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../../index.html">IT Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Brocade</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../brocade/enable_disable_snmp.html">Enable/Disable SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../brocade/set_ntp.html">Setup NTP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../../brocade/manuals/brocade_manuals.html">Manuals</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cisco</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How-To</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../cisco/regenerate_ucs_cert.html">Regenerate UCS Certificate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../../cisco/manuals/manuals.html">Manuals</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Kemp</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How-To</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../Kemp/How-To/Oracle_Apps_Config.html">Create Oracle Applications Service</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Pure</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How-To</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../pure/how-to/check_port_balancing.html">Check Ports for Load Balancing</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Red Hat</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Services</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../../redhat/configuration/kerberos_config.html">Configure Kerberos</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../../redhat/configuration/chrony.html">Install/Configure Chrony</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">System</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../../redhat/configuration/AD_Authentication.html">AD Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../../redhat/configuration/diskadd.html">Disk Addition</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../../redhat/configuration/diskpart.html">Disk Partition</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../../redhat/configuration/diskpart_with_parted.html">Disk Partition with parted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../../redhat/documentation/documentation.html">Documentation &amp; Support</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Installation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../redhat/installation/rhel8mininstall.html">RHEL 8 Minimal Install</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Management</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../redhat/management/chrony_troubleshooting.html">Chrony/NTP Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../redhat/management/create_checksums.html">Creating and Checking Checksums in RedHat</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../redhat/management/cups_commands.html">Cups Commands</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../redhat/management/multipath_commands.html">Multipath Commands</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../redhat/management/nfs_commands.html">NFS Commands</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="_attachments/rh_yum_cheatsheet_1214_jcs_print-1.pdf">YUM Cheat Sheet</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Veeam</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../../veeam/overview.html">Backup Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../../veeam/backup_schedule.html">Backup Schedule</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How-To</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../veeam/Appsprd_Restore.html">Appsprd Restore</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../veeam/ransomware_recovery.html">Ransomware Recovery</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">VMWare</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How To</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../../vmware/Add_Shared_Disk_VM.html">Add Shared Disk to VM</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html">Disaster Recovery</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Chapter 1 - IT DR Plan</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter1/1.0.html">1.0 DR Plan Guide</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter1/1.1.html">1.1 DR Plan Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter1/1.2.html">1.2 Risk Assessment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter1/1.3.html">1.3 Business Impact Analysis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter1/1.4.html">1.4 Alternate Data Center</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter1/1.5.html">1.5 Business Continuity</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter1/1.6.html">1.6 IT Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter1/1.7.html">1.7 IT DR Summary</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Chapter 2 - IT DR Teams</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.0.html">2.0 Recovery Teams Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.1.html">2.1 Executive Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.2.html">2.2 Damage Assessment &amp; Recovery Team</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.3.html">2.3 IT Crisis Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.4.html">2.4 DR Coordinator</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.5.html">2.5 IT Team</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.6.html">2.6 Support Team</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.7.html">2.7 IT Org Chart</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.8.html">2.8 Vendor List</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.9.html">2.9 DR Site Contact List</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.A.html">2.A WEI Authorized Access</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../chapter2/2.B.html">2.B IT Calling Tree</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Chapter 3 - IT Environment</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Chapter 4 - Recovery Process</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../tier0/Tier0.html">Tier 0</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Kemp</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/kemp/K01.html">K01</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Linux</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L01.html">L01</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L02.html">L02</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L03.html">L03</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L04.html">L04</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L05.html">L05</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L06.html">L06</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L07.html">L07</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L08.html">L08</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L09.html">L09</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L10.html">L10</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L11.html">L11</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L12.html">L12</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L13.html">L13</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/linux/L14.html">L14</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/network/N01.html">N01</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/network/N02.html">N02</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/network/N03.html">N03</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/network/N04.html">N04</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/storage/S01.html">S01</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/storage/S02.html">S02</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/storage/S03.html">S03</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Telephony</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/telephony/T02.html">T02</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/telephony/T03.html">T03</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/telephony/T04.html">T04</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Windows</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/windows/W01.html">W01</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/windows/W02.html">W02</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/windows/W03.html">W03</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/windows/W04.html">W04</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/windows/W05.html">W05</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/windows/W06.html">W06</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/windows/W07.html">W07</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/windows/W08.html">W08</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/windows/W09.html">W09</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/windows/W10.html">W10</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier0/windows/W11.html">W11</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Tier1.html">Tier 1A</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Linux</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../linux/L15.html">L15</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../linux/L16.html">L16</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../linux/L17.html">L17</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../linux/L18.html">L18</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../linux/L19.html">L19</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../linux/L20.html">L20</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../linux/L21.html">L21</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../linux/L22.html">L22</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../linux/L23.html">L23</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../linux/L24.html">L24</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../linux/L25.html">L25</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Windows</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="5">
+    <a class="nav-link" href="W12.html">W12</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W13.html">W13</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W14.html">W14</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W15.html">W15</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W16.html">W16</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W17.html">W17</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W18.html">W18</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W19.html">W19</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W20.html">W20</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W21.html">W21</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W22.html">W22</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W23.html">W23</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W24.html">W24</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W25.html">W25</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W26.html">W26</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="W27.html">W27</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../tier1b/Tier1b.html">Tier 1B</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Linux</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1b/linux/L26.html">L26</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Windows</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1b/windows/W28.html">W28</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1b/windows/W29.html">W29</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1b/windows/W30.html">W30</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1b/windows/W31.html">W31</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1b/windows/W32.html">W32</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1b/windows/W33.html">W33</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1b/windows/W34.html">W34</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1b/windows/W35.html">W35</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../tier1c/Tier1c.html">Tier 1C</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Linux</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/linux/L27.html">L27</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/linux/L28.html">L28</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/linux/L29.html">L29</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/linux/L30.html">L30</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Windows</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/windows/W36.html">W36</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/windows/W37.html">W37</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/windows/W38.html">W38</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/windows/W39.html">W39</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/windows/W40.html">W40</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/windows/W41.html">W41</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/windows/W42.html">W42</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/windows/W43.html">W43</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/windows/W44.html">W44</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/windows/W45.html">W45</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier1c/windows/W46.html">W46</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../tier2/Tier2.html">Tier 2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Linux</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/linux/L31.html">L31</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/linux/L32.html">L32</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/linux/L33.html">L33</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/linux/L34.html">L34</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/linux/L35.html">L35</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/linux/L36.html">L36</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/linux/L37.html">L37</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/linux/L38.html">L38</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/linux/L39.html">L39</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Windows</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/windows/W47.html">W47</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/windows/W48.html">W48</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/windows/W49.html">W49</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/windows/W50.html">W50</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/windows/W51.html">W51</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/windows/W52.html">W52</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/windows/W53.html">W53</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/windows/W54.html">W54</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/windows/W55.html">W55</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier2/windows/W56.html">W56</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../tier3/Tier3.html">Tier 3</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Linux</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/linux/L40.html">L40</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/linux/L41.html">L41</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/linux/L42.html">L42</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/linux/L43.html">L43</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Windows</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W57.html">W57</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W58.html">W58</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W59.html">W59</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W60.html">W60</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W61.html">W61</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W62.html">W62</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W63.html">W63</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W64.html">W64</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W65.html">W65</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W66.html">W66</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W67.html">W67</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W68.html">W68</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W69.html">W69</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W70.html">W70</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W71.html">W71</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W72.html">W72</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W73.html">W73</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W74.html">W74</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W75.html">W75</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W76.html">W76</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../tier3/windows/W77.html">W77</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendix</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../appendix/A01.html">A01</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../appendix/A02.html">A02</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../appendix/A03.html">A03</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../appendix/A05.html">A05</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../appendix/A09.html">A09</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../appendix/A10.html">A10</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../appendix/A11.html">A11</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../appendix/A17.html">A17</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="http://plv001antora.bluebunny.com/itdocs/dr/_attachments/dr4.pdf">Chapter 4 PDF</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">IT Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../../index.html">IT Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../../index.html">IT Documentation</a></li>
+    <li><a href="../../../index.html">Disaster Recovery</a></li>
+    <li>Chapter 4 - Recovery Process</li>
+    <li><a href="../Tier1.html">Tier 1A</a></li>
+    <li>Windows</li>
+    <li><a href="W12.html">W12</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///wellsdocs/modules/dr/pages/chapter4/tier1a/windows/W12.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">W12 | RING CENTRAL FOR BUSINESS (DWV088SFB1, DWV088SFB2, DWV088SFB3, DWV051SFBE1, DWV051SFBE2) | 20 MIN</h1>
+<div class="exampleblock">
+<div class="content">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<a href="../../tier0/windows/W01.html" class="page">W01</a>, <a href="../../tier0/windows/W02.html" class="page">W02</a> must be completed before this step.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>dwv088sfb1 (172.27.98.111)</p>
+</li>
+<li>
+<p>dwv088sfb2 (172.27.98.112)</p>
+</li>
+<li>
+<p>dwv088sfb3 (172.27.98.113)</p>
+</li>
+<li>
+<p>dwv051sfbe1 (172.27.98.92)</p>
+</li>
+<li>
+<p>dwv051sfbe2 (172.27.98.93)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Refer to <a href="../../appendix/A02.html" class="page">Appendix A02</a> on starting a VM server and finding the vCenter where it lives.</strong></p>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../../_/js/site.js"></script>
+<script src="../../../../../_/js/vendor/lunr.js"></script>
+<script src="../../../../../_/js/vendor/search.js" id="search-script" data-base-path="../../../../.." data-page-path="/itdocs/dr/chapter4/tier1a/windows/W12.html"></script>
+<script async src="../../../../../_/../search-index.js"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

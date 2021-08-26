@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Disaster Recovery Process :: Wells IT Docs</title>
+    <link rel="canonical" href="http://plv001antora.bluebunny.com/itdocs/dr/chapter4/tier0/storage.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://plv001antora.bluebunny.com">Wells IT Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="http://plv001antora.bluebunny.com/itdocs/index.html">Home</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="itdocs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">IT Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html">Systems Engineers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Brocade</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../brocade/enable_disable_snmp.html">Enable/Disable SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../brocade/set_ntp.html">Setup NTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cisco</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How-To</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../cisco/regenerate_ucs_cert.html">Regenerate UCS Certificate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../cisco/manuals/manuals.html">Manuals</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Red Hat</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Services</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../../redhat/configuration/kerberos_config.html">Configure Kerberos</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">System</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../../redhat/configuration/AD_Authentication.html">AD Authentication</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../redhat/documentation/documentation.html">Documentation &amp; Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Management</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../redhat/management/chrony_troubleshooting.html">Chrony/NTP Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../redhat/management/create_checksums.html">Creating and Checking Checksums in RedHat</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Veeam</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../veeam/Appsprd_Restore.html">Appsprd Restore</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Disaster Recovery</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Chapter 1 - IT DR Plans</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Chapter 2 - IT DR Teams</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Chapter 3 - IT Environment</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Chapter 4 - DR Recovery Process</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tier 0</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="storage.html">Storage</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tier 1</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tier1/storage.html">Storage</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendix</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../appendix/A02.html">A02</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">IT Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">IT Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">IT Documentation</a></li>
+    <li><a href="../../index.html">Disaster Recovery</a></li>
+    <li>Chapter 4 - DR Recovery Process</li>
+    <li>Tier 0</li>
+    <li><a href="storage.html">Storage</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///wellsdocs/modules/dr/pages/chapter4/tier0/storage.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Disaster Recovery Process</h1>
+<div class="sect1">
+<h2 id="_s01_pure_storage_15_min_before_breaking_the_network_connection"><a class="anchor" href="#_s01_pure_storage_15_min_before_breaking_the_network_connection"></a>S01 | Pure Storage | 15 MIN | Before breaking the Network Connection</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Note</div>
+S01 is used in DR Testing and actual DR Events.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>1. Open a browser go to <a href="https://suxpurem50.bluebunny.com" class="bare">https://suxpurem50.bluebunny.com</a> or <a href="https://172.27.100.20" class="bare">https://172.27.100.20</a> and login with the pureuser account.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/DR-CH4-S01-01.jpg" alt="DR CH4 S01 01">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>2. Select "Protection" from the left side menu.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-02.jpg" alt="S01 02">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>3. Select the "Protection Groups" tab at the top of the main window.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-03.jpg" alt="S01 03">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>4. Scroll down and click on the LEMPureX70:PG-DR-Replication Protection Group.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-04.jpg" alt="S01 04">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>5. Click on the "Copy Protection Group" button for the latest snapshot from the "Protection Group Snapshots" section at the bottom of the page.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-05.jpg" alt="S01 05">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>6. In the name text box type a descriptive name and click the Create button</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-06.jpg" alt="S01 06">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>7. Now click Storage in the left side menu and then select the "Volumes" tab at the top of the main window. You will now see copies of the volumes which were part of the protection group.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-07.jpg" alt="S01 07">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>8. Select the "Hosts" tab at the top of the main window.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-08.jpg" alt="S01 08">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>9. Select the host group from the "Host Groups" section at the bottom of the page.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-09.jpg" alt="S01 09">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>10. Click on the three vertical dots in the "Connected Volumes" section and select "Connect".</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-10.jpg" alt="S01 10">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>11. Click the checkbox next to all of the volumes that need to be assigned to the host group and click the Connect button</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-11.jpg" alt="S01 11">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>12. Repeat steps 8-11 for all Host Groups.</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>12. Repeat steps 3-12 for protection group LEMPureM70:PG-DR-Replication.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_s02_preparing_pure_hot_vm_volumes_15_min"><a class="anchor" href="#_s02_preparing_pure_hot_vm_volumes_15_min"></a>S02 | Preparing PURE Hot VM Volumes | 15 MIN |</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>1. Open a browser go to <a href="https://suxpurem50.bluebunny.com" class="bare">https://suxpurem50.bluebunny.com</a> or <a href="https://172.27.100.20" class="bare">https://172.27.100.20</a> and login with the pureuser account.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/DR-CH4-S01-01.jpg" alt="DR CH4 S01 01">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>2. Select "Protection" from the left side menu.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-02.jpg" alt="S01 02">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>3. Select the "Protection Groups" tab at the top of the main window.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S01-03.jpg" alt="S01 03">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>4. Click on the DR-PG-Local Protection Group</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S02-01.jpg" alt="S02 01">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>5. Copy the latest snapshot from the "Protection Group Snapshots" section at the bottom of the page.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S02-02.jpg" alt="S02 02">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>6. Click on the "Copy Snapshot" button for the DR-DWS088-Hot volume in the "Volume Snapshot" window.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S02-03.jpg" alt="S02 03">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>7. In the name text box type a descriptive name and click the Copy button.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S02-04.jpg" alt="S02 04">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>8. Click on the "Close" button in the "Volume Snapshots" window.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S02-05.jpg" alt="S02 05">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>9. Select the "Hosts" tab at the top of the main window.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S02-06.jpg" alt="S02 06">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>10. Select the host group "dws088-cold" from the "Host Groups" section at the bottom of the page.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S02-07.jpg" alt="S02 07">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>11. Click on the three vertical dots in the "Connected Volumes" section and select "Connect".</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/S02-08.jpg" alt="S02 08">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>12.  Click the chckbox next to the volume tht was just creaed and click the Connect button.</strong></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

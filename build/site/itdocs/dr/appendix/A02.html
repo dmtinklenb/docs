@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>A02  | Appendix 02 ( VMware VM Server Start Process and vCenter Location ) :: Wells IT Docs</title>
+    <link rel="canonical" href="http://plv001antora.bluebunny.com/itdocs/dr/appendix/A02.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://plv001antora.bluebunny.com">Wells IT Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="http://plv001antora.bluebunny.com/itdocs/index.html">Home</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="itdocs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">IT Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Brocade</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../brocade/enable_disable_snmp.html">Enable/Disable SNMP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../brocade/set_ntp.html">Setup NTP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cisco</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How-To</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../cisco/regenerate_ucs_cert.html">Regenerate UCS Certificate</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cisco/manuals/manuals.html">Manuals</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Red Hat</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Services</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../redhat/configuration/kerberos_config.html">Configure Kerberos</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">System</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../redhat/configuration/AD_Authentication.html">AD Authentication</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../redhat/documentation/documentation.html">Documentation &amp; Support</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Management</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../redhat/management/chrony_troubleshooting.html">Chrony/NTP Troubleshooting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../redhat/management/create_checksums.html">Creating and Checking Checksums in RedHat</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Veeam</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../veeam/Appsprd_Restore.html">Appsprd Restore</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Disaster Recovery</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Chapter 1 - IT DR Plans</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Chapter 2 - IT DR Teams</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Chapter 3 - IT Environment</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Chapter 4 - DR Recovery Process</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chapter4/tier0/Tier0.html">Tier 0</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Linux</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L01.html">L01</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L02.html">L02</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L03.html">L03</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L04.html">L04</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L05.html">L05</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L06.html">L06</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L07.html">L07</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L08.html">L08</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L09.html">L09</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L10.html">L10</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L11.html">L11</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L12.html">L12</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L13.html">L13</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/linux/L14.html">L14</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Network</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/network/N01.html">N01</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/network/N02.html">N02</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/network/N03.html">N03</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/network/N04.html">N04</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/storage/S01.html">S01</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../chapter4/tier0/storage/S02.html">S02</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tier 1</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../chapter4/tier1/storage.html">Storage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendix</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="A02.html">A02</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="A10.html">A10</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="A11.html">A11</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="A17.html">A17</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">IT Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">IT Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">IT Documentation</a></li>
+    <li><a href="../index.html">Disaster Recovery</a></li>
+    <li>Chapter 4 - DR Recovery Process</li>
+    <li>Appendix</li>
+    <li><a href="A02.html">A02</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///wellsdocs/modules/dr/pages/appendix/A02.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">A02  | Appendix 02 ( VMware VM Server Start Process and vCenter Location )</h1>
+<div class="sect1">
+<h2 id="_boot_vm"><a class="anchor" href="#_boot_vm"></a>Boot VM</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>1. Open a browser go to <a href="https://dav010vctr.bluebunny.com/ui" class="bare">https://dav010vctr.bluebunny.com/ui</a> or <a href="https://172.27.97.12/ui" class="bare">https://172.27.97.12/ui</a> and login as the administrator@vsphere.local user.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-01.jpg" alt="A02 01">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>2. Click on the "VMs and Templates" view icon.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-02.jpg" alt="A02 02">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>3. Navigate the tree in the left pane to the VM to be booted.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-03.jpg" alt="A02 03">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>4. Click on the "Actions" menu and select "Edit Settings&#8230;&#8203;".</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-04.jpg" alt="A02 04">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>5. Verify that the Network adapter(s) has the VLAN set and it is correct. Then verify the Connect checkbox is checked and click the OK button.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-05.jpg" alt="A02 05">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>6. To boot the VM click on the "Actions" menu select "Power" then select "Power On".</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-06.jpg" alt="A02 06">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_replicated_copied_or_moved_vms"><a class="anchor" href="#_replicated_copied_or_moved_vms"></a>Replicated, Copied or Moved VMs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>1. If the VM was replicated, copied or moved, you may see the message below.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-07.jpg" alt="A02 07">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>2. In the "Answer Question" window, you should select "I Moved It"</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-08.jpg" alt="A02 08">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_console_access"><a class="anchor" href="#_console_access"></a>Console Access</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>1.
+To monitor the VM as it is booting you can access the console by clicking on the console icon at the top or clicking on the console links.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-09.jpg" alt="A02 09">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>2. Select "Web Console" and click the "Launch" button in the "Launch Console" window.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-10.jpg" alt="A02 10">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>3. A console screen should pop up in another browser tab or window.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-11.jpg" alt="A02 11">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setting_correct_dns_in_resolv_conf_file"><a class="anchor" href="#_setting_correct_dns_in_resolv_conf_file"></a>Setting Correct DNS in resolv.conf File</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>The servers we use for DNS resolution at the corporate office are different than the servers we use at DR so we need to point the VM to the DR DNS servers. To do this you need to edit the /etc/resolv.conf file. This change will not persist through a reboot. If you need to reboot the VM you will need to make the change again.</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>1. Login to the console as the root user.</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/A02-12.jpg" alt="A02 12">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>2. Open the /etc/resolv.conf file with the vi editor.</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># vi /etc/resolv.conf</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The file should look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># Generated by NetworkManager
+search bluebunny.com
+nameserver 172.23.10.113
+nameserver 173.27.98.101
+nameserver 172.23.10.69
+options attempts: 2
+options timeout: 1
+# NOTE: the libc resolver may not support more than 3 nameservers.
+# The nameservers listed below may not be recognized.
+nameserver 172.27.98.102</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>3. Use the "j" key to move down to the first nameserver line. Then type "dd" to delete the line. The first name server listed should be 172.27.98.101.</strong></p>
+</div>
+<div class="paragraph">
+<p>If the "nameserver 172.27.98.101" line does not exist use the "j" key to move down to the first nameserver line. Type "i" to enter input mode. Then type "nameserver 172.27.98.101&lt;ENTER&gt;". Press the &lt;ESC&gt; key to get out of input mode.</p>
+</div>
+<div class="paragraph">
+<p><strong>4. Save the file by type ":wq"</strong></p>
+</div>
+<div class="paragraph">
+<p>*5. Type "exit" to logout.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># exit</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
