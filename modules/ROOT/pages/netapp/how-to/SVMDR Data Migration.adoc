@@ -1,0 +1,403 @@
+= NetApp SVMDR Snapmirror Data Migration
+
+Scott Linden - Sept 8, 2021
+
+[NOTE]
+All of the commands in this document are specific to an environment migration I was performing. Your environment may need to be evaluated for possible changes.
+
+TIP: The terms SVM, Storage Virtual Machine and vserver are interchangable.
+
+[cols="2*"]
+|===
+|lem-netapp-test	|Source NetApp Environment
+|lem-netapp-test-01	|Source NetApp Environment Node 01
+|lem-netapp-test-02	|Source NetApp Environment Node 02
+|lem-netapp-c190	|Destination NetApp Environment
+|lem-netapp-c190-01	|Destination NetApp Environment Node 01
+|lem-netapp-c190-02	|Destination NetApp Environment Node 02
+|===
+|===
+|filetest	|Source SVM (vserver)
+|filetest_new	|Destination SVM (vserver)
+|===
+|===
+|172.23.6.234	|Source NetApp Environment InterCluster LIF IP Address
+|172.23.6.193	|Destination NetApp Environment InterCluster LIF IP Address
+|172.23.6.194	|Destination NetApp Environment InterCluster LIF IP Address
+|===
+
+== Prepare the Arrays
+=== Create a broadcast-domain called data_bd
+
+From Destination NetApp Environment.
+====
+lem-netapp-c190::> network port broadcast-domain rename -ipspace Default -broadcast-domain Default-1 -new-name data_bd
+====
+====
+lem-netapp-c190::> network port broadcast-domain remove-ports -ipspace Default -broadcast-domain Default-2 -ports lem-netapp-c190-01:e0d
+====
+====
+lem-netapp-c190::> network port broadcast-domain remove-ports -ipspace Default -broadcast-domain Default-3 -ports lem-netapp-c190-02:e0c
+====
+====
+lem-netapp-c190::> network port broadcast-domain remove-ports -ipspace Default -broadcast-domain Default-4 -ports lem-netapp-c190-02:e0d
+====
+====
+lem-netapp-c190::> network port broadcast-domain add-ports -ipspace Default -broadcast-domain data_bd -ports lem-netapp-c190-01:e0d,lem-netapp-c190-02:e0c,lem-netapp-c190-02:e0d
+====
+
+=== Create the Intercluster LIFs.
+From Destination NetApp Environment.
+====
+lem-netapp-c190::> network interface create -vserver lem-netapp-c190 -lif icl1 -role intercluster -home-node lem-netapp-c190-01 -home-port e0c -address 172.23.6.193 -netmask 255.255.255.0 -service-policy default-intercluster -failover-group data_bd -auto-revert true
+====
+====
+lem-netapp-c190::> network interface create -vserver lem-netapp-c190 -lif icl2 -role intercluster -home-node lem-netapp-c190-02 -home-port e0c -address 172.23.6.194 -netmask 255.255.255.0 -service-policy default-intercluster -failover-group data_bd -auto-revert true
+====
+
+=== Create the cluster peer relationship
+From Destination NetApp Environment.
+====
+lem-netapp-c190::> cluster peer create -peer-addrs 172.23.6.234      # IP Address(s) of the Source cluster's intercluster LIFs
+====
+From Source NetApp Environment.
+====
+lem-netapp-test::> cluster peer create -peer-addrs 172.23.6.193,172.23.6.194.    G # IP Address(s) of the Destination cluster's intercluster LIFs
+
+Notice: Use a generated passphrase or choose a passphrase of 8 or more characters.
+To ensure the authenticity of the peering relationship, use a phrase or sequence of characters that would be hard to guess.
+
+Enter the passphrase: **********
+Confirm the passphrase: **********
+====
+Run to view status of the cluster peer.
+====
+lem-netapp-c190::> cluster peer show -instance
+
+                       Peer Cluster Name: lem-netapp-test
+           Remote Intercluster Addresses: 172.23.6.234
+      Availability of the Remote Cluster: Available
+                     Remote Cluster Name: lem-netapp-test
+                     Active IP Addresses: 172.23.6.234
+                   Cluster Serial Number: 1-80-000011
+                    Remote Cluster Nodes: lem-netapp-test-01
+                   Remote Cluster Health: true
+                 Unreachable Local Nodes: -
+          Address Family of Relationship: ipv4
+    Authentication Status Administrative: use-authentication
+       Authentication Status Operational: ok
+                        Last Update Time: 9/9/2021 13:50:48
+            IPspace for the Relationship: Default
+Proposed Setting for Encryption of Inter-Cluster Communication: -
+Encryption Protocol For Inter-Cluster Communication: tls-psk
+  Algorithm By Which the PSK Was Derived: akep2
+2 entries were displayed.
+====
+[NOTE]
+All of the commands above only need to be done once prior to the migration of the first SVM (vserver).
+
+== Migrate an SVM
+=== Create the Mirrored SVMs
+From Destination NetApp Environment.
+
+. Create the destination SVM.
++
+====
+lem-netapp-c190::> vserver create -vserver filetest4_new -subtype dp-destination
+====
++
+. Create the SVM Peer Relationship
++
+====
+lem-netapp-c190::> vserver peer create -vserver filetest4_new -peer-vserver filetest4 -applications snapmirror -peer-cluster lem-netapp-test
+====
+
+From Source NetApp Environment.
+
+. On the source cluster accept the SVM Peer Relationship
+====
+lem-netapp-test::> vserver peer accept -vserver filetest4 -peer-server filetest4_new
+====
+
+From Destination NetApp Environment.
+
+. Setup the SVM DR Relationship from the destination cluster
++
+====
+lem-netapp-c190::> snapmirror create -source-path filetest4: -destination-path filetest4_new: -identity-preserve true
+====
++
+. Initialize SVM DR Relationship from the destination cluster. This will take some time
++
+====
+lem-netapp-c190::> snapmirror initialize -destination-path filetest4_new:
+====
++
+. Monitor the mirror sync process
+====
+lem-netapp-c190::> snapmirror show -expand
+Source            Destination Mirror  Relationship   Total             Last
+Path        Type  Path        State   Status         Progress  Healthy Updated
+----------- ---- ------------ ------- -------------- --------- ------- --------
+filetest4:  XDP  filetest4_new:
+Snapmirrored
+Idle           -         true    -
+filetest4:testapp4
+XDP  filetest4_new:testapp4
+Snapmirrored
+Idle           -         true    -
+====
+For more details
+====
+lem-netapp-c190::> snapmirror show -instance -destination-path filetest4_new:
+
+                            Source Path: filetest4:
+                       Destination Path: filetest4_new:
+                      Relationship Type: XDP
+                Relationship Group Type: vserver
+                    SnapMirror Schedule: -
+                 SnapMirror Policy Type: async-mirror
+                      SnapMirror Policy: MirrorAllSnapshots
+                            Tries Limit: -
+                      Throttle (KB/sec): unlimited
+                           Mirror State: Snapmirrored
+                    Relationship Status: Idle
+                File Restore File Count: -
+                 File Restore File List: -
+                      Transfer Snapshot: -
+                      Snapshot Progress: -
+                         Total Progress: -
+              Network Compression Ratio: -
+                    Snapshot Checkpoint: -
+                        Newest Snapshot: vserverdr.1.844e91b1-0ca7-11ec-b8e5-d039ea2dccb3.2021-09-09_141500
+              Newest Snapshot Timestamp: 09/09 14:15:00
+                      Exported Snapshot: vserverdr.1.844e91b1-0ca7-11ec-b8e5-d039ea2dccb3.2021-09-09_141500
+            Exported Snapshot Timestamp: 09/09 14:15:00
+                                Healthy: true
+                       Unhealthy Reason: -
+                Destination Volume Node: -
+                        Relationship ID: bb96e465-0ca7-11ec-b8e5-d039ea2dccb3
+                   Current Operation ID: -
+                          Transfer Type: -
+                         Transfer Error: -
+                       Current Throttle: -
+              Current Transfer Priority: -
+                     Last Transfer Type: update
+                    Last Transfer Error: -
+                     Last Transfer Size: 4.62MB
+Last Transfer Network Compression Ratio: -
+                 Last Transfer Duration: 0:1:12
+                     Last Transfer From: filetest4:
+            Last Transfer End Timestamp: 09/09 14:16:12
+                  Progress Last Updated: -
+                Relationship Capability: -
+                               Lag Time: 0:7:8
+           Identity Preserve Vserver DR: true
+                 Volume MSIDs Preserved: true
+                 Is Auto Expand Enabled: -
+           Number of Successful Updates: -
+               Number of Failed Updates: -
+           Number of Successful Resyncs: -
+               Number of Failed Resyncs: -
+            Number of Successful Breaks: -
+                Number of Failed Breaks: -
+                   Total Transfer Bytes: -
+         Total Transfer Time in Seconds: -
+====
+[NOTE]
+===============================
+If migrating from version 9.5 to 9.6 there is a bug that causes the initialization to fail because of a custom service policy that is created. This is how you fix the error. Run the following commands from the destination cluster.
+
+. Enter debug mode on destination cluster.
++
+====
+lem-netapp-c190::> set d
+====
++
+. Show the destination SVM network interface information
++
+====
+lem-netapp-c190::*> network interface show -vserver filetest4_new
+Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+filetest4_new
+filetest4.bluebunny.com_cifs_nfs_lif1
+up/up    172.23.6.206/24    lem-netapp-c190-01
+e0c     true
+====
++
+. Show the destination SVM service policies.
++
+====
+lem-netapp-c190::*> network interface service-policy show -vserver filetest4_new
+Vserver   Policy                     Service: Allowed Addresses
+--------- -------------------------- ----------------------------------------
+filetest4_new
+default-data-blocks        data-core: 0.0.0.0/0
+data-iscsi: 0.0.0.0/0
+
+          default-data-files         data-core: 0.0.0.0/0
+                                     data-nfs: 0.0.0.0/0
+                                     data-cifs: 0.0.0.0/0
+                                     data-flexcache: 0.0.0.0/0
+
+          default-management         data-core: 0.0.0.0/0
+                                     management-ssh: 0.0.0.0/0
+                                     management-https: 0.0.0.0/0
+
+3 entries were displayed.
+====
++
+. Change the service policy on the destination SVM
++
+====
+lem-netapp-c190::*> vserver config override -command "network interface modify -vserver filetest4_new -lif filetest4.bluebunny.com_cifs_nfs_lif1 -service-policy default-data-files"
+====
++
+. Restart the initialization
+====
+lem-netapp-c190::> snapmirror initialize -destination-path filetest4_new:
+====
+===============================
+
+=== Migrating To the Destination SVMs
+From Destination NetApp Environment.
+
+. Do a final update of the mirror from the destination cluster
++
+====
+lem-netapp-c190::> snapmirror update -destination-path filetest4_new;
+====
++
+. Break the mirror from the destination cluster
++
+====
+lem-netapp-c190::> snapmirror break -destination-path filetest4_new;
+====
++
+. Check if the mirror is broken
++
+====
+lem-netapp-c190::> snapmirror show -expand
+====
+
+From Source NetApp Environment
+
+. Stop the source SVM from the source cluster
++
+====
+lem-netapp-test::> vserver stop -vserver filetest4
+====
++
+. Check if the SVM was stopped
+====
+lem-netapp-test::> vserver show
+====
+
+From Destination NetApp Environment.
+
+. Start the destination SVM from the destination cluster
++
+====
+lem-netapp-c190::> vserver start -vserver filetest4_new
+====
++
+. Check if the SVM is running
+====
+lem-netapp-c190::> vserver show
+====
+
+=== Remove the SVM Peering
+From Destination NetApp Environment.
+
+. Delete the snap mirror from the destination cluster
+====
+lem-netapp-c190::> snapmirror delete -destination-path filetest4_new;
+====
+
+From Source NetApp Environment.
+
+. Get the relationship-id information from the source cluster
++
+====
+lem-netapp-test::> snapmirror list-destionation -destination-path filetest4_new: -fields relationship-id
+source-path destination-path relationship-id
+----------- ---------------- ------------------------------------
+filetest4:  filetest4_new:   6ec20d5f-0ca2-11ec-b8e5-d039ea2dccb3
+====
++
+. Release the snapmirror from the source cluster.
+====
+lem-netapp-test::> snapmirror release -soure-path filetest4: -destination-path filetest4_new: -relationship-id 6ec20d5f-0ca2-11ec-b8e5-d039ea2dccb3
+====
+
+From Destination NetApp Environment.
+
+. Delete the SVM Peer from the destination cluster.
+====
+lem-netapp-c190::> vserver peer delete -vserver filetest4_new -peer-vserver filetest4
+====
+
+=== Rename the Destination SVM
+From Destination NetApp Environment.
+====
+lem-netapp-c190::> vserver rename -newname filetest4 -foreground true -vserver filetest4_new
+====
+
+=== Remove and Re-Add the SVM to the Active Directory Domain
+This needs to be done from a Windows server as a user with the necessary privileges.
+
+. Manually remove the SVM from the Active Directory Domain.
+. Manually add the SVM to the Active Directory Domain
+
+Run the following command from the destination cluster.
+
+. Reset the CIFS server account password.
++
+====
+cifs password-reset -vserver filetest4
+====
++
+. May need to run these commands if CIFS is not working properly.
+====
+lem-netapp-c190::> vserver cifs modify -vserver filetest4 -domain BLUEBUNNY.COM -status-admin down
+====
+====
+lem-netapp-c190::>vserver cifs modify -vserver filetest4 -domain BLUEBUNNY.COM -status-admin up
+====
+
+=== TROUBLESHOOTING
+==== Checking Logs
+====
+event log show
+====
+====
+event log show -severity ERROR
+====
+====
+event log show -severity EMERGENCY
+====
+====
+event log show -severity ERROR -event *filetest4*
+====
+
+==== Checking CIFS connections
+====
+cifs connection show
+====
+
+==== Show vservers (SVMs)
+====
+vserver show
+====
+
+==== Show network interfaces
+====
+network interface show
+====
+
+==== Show LDAP Clients
+====
+vserver services name-service ldap client show
+====
