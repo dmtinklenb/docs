@@ -1,11 +1,11 @@
 site:
   title: Wells IT Docs
-  url: http://plv001antora.bluebunny.com
+  url: http://wellsdocs.centralus.cloudapp.azure.com
 
 content:
   sources:
   - url: .
-    branches: HEAD
+    branches: master
 
 ui:
   bundle:
